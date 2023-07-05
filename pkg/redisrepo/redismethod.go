@@ -37,7 +37,7 @@ func IsUserExist(username string) bool {
 }
 
 // 사용자이름과 비밀번호를 비교합니다.
-func isUserAuthentic(username, password string) error {
+func IsUserAuthentic(username, password string) error {
 	p := redisClient.Get(context.Background(), username).Val()
 
 	if !strings.EqualFold(p, password) {

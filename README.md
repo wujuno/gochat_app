@@ -2,6 +2,7 @@
 
 ```
 📦gochatapp
+┣ 📂client
 ┣ 📂model
 ┃ ┗ 📜chat.go
 ┣ 📂pkg

@@ -15,9 +15,7 @@
 ┃ ┃ ┣ 📜key.go
 ┃ ┃ ┗ 📜redismethod.go
 ┃ ┗ 📂ws
-┃ ┃ ┗ 📜websocket.go
-┣ 📜.env
-┣ 📜.gitignore
+┃   ┗ 📜websocket.go
 ┣ 📜go.mod
 ┣ 📜go.sum
 ┗ 📜main.go

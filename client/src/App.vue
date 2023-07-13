@@ -1,20 +1,30 @@
 <template>
   <v-app>
-    <v-container>
-      <v-btn color="primary">Hello Vuetify</v-btn>
+    <v-container class="container">
+      <Header />
+      <router-view />
+      <Footer />
     </v-container>
-    <router-view />
   </v-app>
 </template>
 
 <script>
-import { VApp, VContainer, VBtn } from "vuetify/lib";
-
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 export default {
   components: {
-    VApp,
-    VContainer,
-    VBtn,
+    Header,
+    Footer,
   },
 };
 </script>
+
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+  max-width: 680px;
+}
+</style>

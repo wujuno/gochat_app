@@ -6,22 +6,22 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "landing",
+    name: "LANDING",
     component: () => import("../views/LandingView.vue"),
   },
   {
     path: "/register",
-    name: "register",
+    name: "REGISTER",
     component: () => import("../views/RegisterView.vue"),
   },
   {
     path: "/login",
-    name: "login",
+    name: "LOGIN",
     component: () => import("../views/LoginView.vue"),
   },
   {
     path: "/chat",
-    name: "chat",
+    name: "CHAT",
     component: () => import("../views/ChatView.vue"),
   },
 ];

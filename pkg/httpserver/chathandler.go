@@ -98,7 +98,7 @@ func register(u *userReq) *response {
 	status := redisrepo.IsUserExist(u.Username)
 	if status {
 		res.Status = false
-		res.Message = "username is already taken. Try something else."
+		res.Message = "Username is already taken. Try something else."
 		return res
 	}
 	

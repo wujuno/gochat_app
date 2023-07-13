@@ -1,8 +1,10 @@
 <template>
-  <div class="chat-icon">
-    <v-icon size="40">mdi-chat</v-icon>
-    <span class="chat-text">Go Chat</span>
-  </div>
+  <router-link :to="{ name: 'LANDING' }" class="link-reset">
+    <div class="chat-icon">
+      <v-icon size="40">mdi-chat</v-icon>
+      <span class="chat-text">Go Chat</span>
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -21,5 +23,10 @@ export default {};
   margin-left: 0.5rem;
   font-size: 2rem;
   font-weight: 700;
+  color: inherit;
+}
+
+.link-reset {
+  text-decoration: none;
 }
 </style>

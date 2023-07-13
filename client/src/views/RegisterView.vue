@@ -46,8 +46,8 @@ export default {
       username: "",
       password: "",
       message: "",
-      isInvalid: "",
-      endpoint: 'http://localhost:8080/"register',
+      isInvalid: false,
+      endpoint: "http://localhost:8080/register",
       redirect: false,
       redirectTo: "/chat?u=",
     };
@@ -61,8 +61,17 @@ export default {
         });
 
         console.log("register", res);
+        if (res.data.status === 200) {
+          this.redirectTo += this.username;
+          this.redirect = true;
+        } else {
+          this.message = res.data.message;
+          this.isInvalid = true;
+        }
       } catch (error) {
         console.log(error);
+        this.message = "Something went wrong.";
+        this.isInvalid = true;
       }
     },
   },
